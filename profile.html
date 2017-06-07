@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Publish Subscribe application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/bootstrap.min.css">
+  <link rel="stylesheet" href="css/stile.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/fileinput.css">
+  <script src="lib/jquery.js"></script>
+  <script src="lib/bootstrap.js"></script>
+  <script src="/js/fileinput.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/home">PubSub</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" id="nav-right">
+        <li class="active"><a href="/profile"><span class="glyphicon glyphicon-user"></span> Profilo</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="container-fluid">
+    <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+          <img id="img_profile" src="" class="img-responsive" alt="">
+        </div>
+        <!-- END SIDEBAR USERPIC -->
+        <!-- SIDEBAR USER TITLE -->
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name" id="username-profile"></div>
+        </div>
+        <!-- END SIDEBAR USER TITLE -->
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active">
+              <a data-toggle="pill" href="#account">
+              <i class="glyphicon glyphicon-user"></i>
+              Account Settings
+              </a>
+            </li>
+            <li>
+              <a data-toggle="pill" href="#interessi">
+              <i class="glyphicon glyphicon-ok"></i>
+                Interessi 
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+      </div>
+    </div>
+    <div class="col-md-9 tab-content">
+      <div class="profile-content tab-pane fade in active" id="account">
+        <h1 id="ov_username"></h1>
+        <h3>Cambia immagine di profilo</h3>
+        <label class="control-label">Seleziona file</label>
+        <input type="file" class="form-control" name="image_prof" id="images_url" accept=".jpg" data-show-preview="false"/>
+        <br>
+        <input type="button" class="form-controll btn btn-success" id="upload" value="Upload"></input>
+        <hr>
+        <h3>Cambia password</h3>
+        <input id="old_password" type="password" class="form-control" name="old_password" placeholder="Vecchia password">
+        <br>
+        <input id="new_password" type="password" class="form-control" name="new_password" placeholder="Nuova password">
+        <br>
+        <input type="button" class="form-controll btn btn-success" id="change_pass" value="Cambia"></input>
+      </div>
+      <div class="profile-content tab-pane fade" id="interessi">
+      <h2>I miei interessi</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/getUser.js"></script>
+</body>
+</html>
